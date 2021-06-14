@@ -1,0 +1,121 @@
+body{
+    padding: 0;
+    margin: 0;
+}
+
+.font-white{
+    color: white;
+}
+
+.container{
+    width: 80%;
+    height: 75vh;
+
+    display: flex;
+    margin: 5% auto;
+   
+}
+
+#conteudo{
+    width: 50%;
+    height: 100%;
+
+    display: flex;
+    flex-direction: column;
+    
+    justify-content: center;
+
+    padding: 0 2%;
+
+    
+}
+
+#conteudo .titulo{
+    font-size: 3em;
+}
+
+#conteudo .desc{
+    font-size: 1.2em;
+}
+
+#form{
+    width: 50%;
+    height: 100%;
+
+    display: flex;
+    flex-direction: column;
+    
+    align-items: center;
+
+}
+
+#form .button-try{
+    width: 92%;
+    height: 11%;
+
+    border-radius: 8px;
+    border: hsla(248, 39%, 41%, 0.514) 2px solid;
+    background:hsl(248, 32%, 49%);
+
+    margin-bottom: 30px;
+    
+    box-shadow: rgba(0, 0, 0, 0.486) 0 6px 1px -2px;
+}
+
+#form .area-formulario{
+    width: 83%;
+    height: 93%;
+
+    background: white;
+
+    border-radius: 8px;
+    padding: 20px;
+
+    
+}
+
+#form .area-formulario form{
+    width: 100%;
+    padding: 8px;
+}
+
+#form .area-formulario form div{
+    margin-bottom: 20px;
+}
+
+#form .area-formulario form input{
+    width: 90%;
+    height: 15px;
+
+    border-radius: 6px;
+    border: rgba(0, 0, 0, 0.438) 1px solid;
+
+    padding: 15px;
+    
+}
+
+#form .area-formulario .button-claim{
+    width: 97%;
+    padding: 13px;
+
+    background: hsl(154, 59%, 51%);
+
+    border-radius: 6px;
+    border: 0;
+    border-bottom: hsl(154, 56%, 40%) 3px solid;
+
+    text-transform: uppercase;
+    font-size: 1.1em;
+
+}
+
+#form .area-formulario .termo{
+    text-align: center;
+    font-size: 12px;
+}
+#form .area-formulario .termo a{
+    color: red;
+    font-weight: bold;
+    text-decoration: none;
+}
+
