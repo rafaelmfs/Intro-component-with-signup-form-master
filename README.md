@@ -18,7 +18,10 @@ Esta é uma solução para o desafio [Intro component with sign up form challeng
 
 ### Screenshot
 
-![](./screenshot.jpg)
+![image](https://user-images.githubusercontent.com/80429145/122317991-c78a3e00-cef4-11eb-8a1a-4446f4e73411.png)
+![image](https://user-images.githubusercontent.com/80429145/122318005-cbb65b80-cef4-11eb-8bc1-ee8b5aec2bff.png)
+![image](https://user-images.githubusercontent.com/80429145/122318014-cf49e280-cef4-11eb-9494-b0b1a2067f45.png)
+
 
 ### Links
 
