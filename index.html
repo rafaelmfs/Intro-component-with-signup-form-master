@@ -5,41 +5,57 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
 
   <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
   
   <title>Frontend Mentor | Intro component with sign up form</title>
 
   <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
   <style>
-    .attribution { font-size: 11px; text-align: center; }
+    .attribution { 
+      font-size: 1.1rem; 
+      text-align: center; 
+      color: rgba(70, 70, 70, 0.829); 
+      text-shadow: 0 1px 5px rgba(255, 255, 255, 0.822);
+    }
     .attribution a { color: hsl(228, 45%, 44%); }
   </style>
 </head>
 <body>
   <main class="container">
     <section id="conteudo">
-      <h1 class="titulo">Learn to code by watching others</h1>
-      <p class="desc">See how experienced developers solve problems in real-time. Watching scripted tutorials is great, 
+      <h1 class="titulo font-white">Learn to code by watching others</h1>
+      <p class="desc font-white">See how experienced developers solve problems in real-time. Watching scripted tutorials is great, 
       but understanding how developers think is invaluable. </p>
     </section>
     <section id="form">
-      <button class="button-try font-white"><b>Try it free 7 days</b> then $20/mo. thereafter</button>
+      <button class="button-try font-white" name="buttonTry"><b>Try it free 7 days</b> then $20/mo. thereafter</button>
       <div class="area-formulario">
-        <form action="">
+        <form action="/" method="POST" id="formulario">
           <div>
-            <input type="text" placeholder="First Name" id="name">
+            <input type="text" placeholder="First Name" class="" id="nome" name="nome">
+            <svg class="icon-error" width="24" height="24" xmlns="http://www.w3.org/2000/svg"><g fill="none" fill-rule="evenodd"><circle fill="#FF7979" cx="12" cy="12" r="12"/><rect fill="#FFF" x="11" y="6" width="2" height="9" rx="1"/><rect fill="#FFF" x="11" y="17" width="2" height="2" rx="1"/></g></svg>
+            <p class="msg-error">First Name cannot be empty</p>
           </div>
           <div>
-            <input type="text" placeholder="Last Name" id="last-name">
+            <input type="text" placeholder="Last Name" class="" id="last-name" name="sobrenome">
+            <svg class="icon-error" width="24" height="24" xmlns="http://www.w3.org/2000/svg"><g fill="none" fill-rule="evenodd"><circle fill="#FF7979" cx="12" cy="12" r="12"/><rect fill="#FFF" x="11" y="6" width="2" height="9" rx="1"/><rect fill="#FFF" x="11" y="17" width="2" height="2" rx="1"/></g></svg>
+            <p class="msg-error">Last Name cannot be empty</p>
           </div>
           <div>
-            <input type="text" placeholder="Email Address" id="email">
+            <input type="text" placeholder="E-mail Address" class="" id="email" name="email">
+            <svg class="icon-error" width="24" height="24" xmlns="http://www.w3.org/2000/svg"><g fill="none" fill-rule="evenodd"><circle fill="#FF7979" cx="12" cy="12" r="12"/><rect fill="#FFF" x="11" y="6" width="2" height="9" rx="1"/><rect fill="#FFF" x="11" y="17" width="2" height="2" rx="1"/></g></svg>
+            <p class="msg-error">E-mail cannot be empty</p>
+            <p class="msg-error" id="email-invalido">E-mail Inválido!</p>
           </div>
           <div>
-            <input type="text" placeholder="Password" id="word">
+            <input type="password" placeholder="Password" class="" id="word" name="word">
+            <svg class="icon-error" width="24" height="24" xmlns="http://www.w3.org/2000/svg"><g fill="none" fill-rule="evenodd"><circle fill="#FF7979" cx="12" cy="12" r="12"/><rect fill="#FFF" x="11" y="6" width="2" height="9" rx="1"/><rect fill="#FFF" x="11" y="17" width="2" height="2" rx="1"/></g></svg>
+            <p class="msg-error">Password cannot be empty</p>
           </div>
           <div>
-            <button class="button-claim font-white">Claim your free trial</button>
+            <button class="button-claim font-white" name="buttonClaim" id="button-claim">Claim your free trial</button>
             <p class="termo">By clicking the button, you are agreeing to our <a href="#">Terms and Services</a></p>
           </div>
         </form>
@@ -49,8 +65,9 @@
   <footer>
     <p class="attribution">
       Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
-      Coded by <a href="#">Your Name Here</a>.
+      Coded by <a href="#">Rafael Marques</a>.
     </p>
   </footer>
+  <script src="script.js"></script>
 </body>
 </html>

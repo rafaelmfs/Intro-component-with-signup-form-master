@@ -1,6 +1,30 @@
+@keyframes background-animation{
+    0%{background-position: 0 100%;}
+    100%{background-position: 0 -492%;}
+}
+
+@keyframes balancar{
+    0%{margin-left: 5px;}
+    25%{margin-left: 0; margin-right: 5px;}
+    50%{margin-right: 0; margin-left: 5px;}
+    75%{margin-left: 0; margin-right: 5px;}
+    100%{margin-left: 0; margin-right: 0;}
+}
+
+html {
+    font-size: 62.5%;
+}
+
 body{
     padding: 0;
     margin: 0;
+
+    max-width: 1440px;
+    background-image: url(images/bg-intro-desktop.png);
+    background-color: hsl(0, 100%, 74%);
+
+    font-family: 'Poppins', sans-serif;
+    animation: background-animation 20s linear infinite;
 }
 
 .font-white{
@@ -12,6 +36,7 @@ body{
     height: 75vh;
 
     display: flex;
+    
     margin: 5% auto;
    
 }
@@ -31,11 +56,13 @@ body{
 }
 
 #conteudo .titulo{
-    font-size: 3em;
+    font-size: 5rem;
+    margin-bottom: 7px;
+    line-height: 1;
 }
 
 #conteudo .desc{
-    font-size: 1.2em;
+    font-size: 1.5rem;
 }
 
 #form{
@@ -46,12 +73,16 @@ body{
     flex-direction: column;
     
     align-items: center;
+    justify-content: center;
 
 }
 
 #form .button-try{
     width: 92%;
-    height: 11%;
+    height: 15%;
+    max-height: 100px;
+
+    padding: 2%;
 
     border-radius: 8px;
     border: hsla(248, 39%, 41%, 0.514) 2px solid;
@@ -59,44 +90,58 @@ body{
 
     margin-bottom: 30px;
     
-    box-shadow: rgba(0, 0, 0, 0.486) 0 6px 1px -2px;
+    box-shadow: rgba(65, 64, 64, 0.514) 0 8px 1px -2px;
+    cursor: pointer;
+}
+
+#form .button-try:hover{
+    background:rgb(70, 56, 161);
+    font-weight: bold;
+
 }
 
 #form .area-formulario{
     width: 83%;
     height: 93%;
+    max-height: 800px;
 
     background: white;
 
     border-radius: 8px;
     padding: 20px;
 
+    box-shadow: rgba(65, 64, 64, 0.514) 0 8px 1px -2px;
     
 }
 
 #form .area-formulario form{
     width: 100%;
     padding: 8px;
+
 }
 
 #form .area-formulario form div{
     margin-bottom: 20px;
+    position: relative;
 }
 
 #form .area-formulario form input{
     width: 90%;
-    height: 15px;
+    height: 15%;
 
     border-radius: 6px;
     border: rgba(0, 0, 0, 0.438) 1px solid;
 
-    padding: 15px;
-    
+    padding: 3.5%;
+
+    font-weight: bold;
+    outline-color: hsla(248, 39%, 41%, 0.514);
+       
 }
 
 #form .area-formulario .button-claim{
     width: 97%;
-    padding: 13px;
+    padding: 15px;
 
     background: hsl(154, 59%, 51%);
 
@@ -105,13 +150,22 @@ body{
     border-bottom: hsl(154, 56%, 40%) 3px solid;
 
     text-transform: uppercase;
-    font-size: 1.1em;
+    font-size: 1.3rem;
+
+    cursor: pointer;
+
+}
+
+#form .area-formulario .button-claim:hover{
+    background: hsla(154, 59%, 51%, 0.733);
+    font-weight: bold;
 
 }
 
 #form .area-formulario .termo{
     text-align: center;
-    font-size: 12px;
+    font-size: 1.2rem;
+    color: rgb(109, 109, 109);
 }
 #form .area-formulario .termo a{
     color: red;
@@ -119,3 +173,100 @@ body{
     text-decoration: none;
 }
 
+.icon-error{
+    position: absolute;
+    right: 5%;
+    top: 20%;
+
+    display: none;
+
+}
+
+.msg-error{
+    margin: 0 20px;
+    text-align: end;
+    font-style: italic;
+    font-size: 1.2rem;
+    color: #FF7979;
+
+    display: none;
+
+}
+
+.error{
+    display: block;
+}
+
+#form .area-formulario form input.error-border{
+    color: #FF7979;
+    border: 2px solid #ff7979d3;
+}
+
+#form .area-formulario form input.error-border::placeholder{
+    color: #FF7979;
+    font-style: italic;
+}
+
+.animacao-error{
+    animation: balancar 500ms;
+}
+
+@media (max-width:950px){
+    html{
+        font-size: 50%;
+    }
+}
+
+@media(max-width: 670px){
+
+    body{
+        background-image: url(images/bg-intro-mobile.png);
+    }
+
+    .container{
+        width: 90%;
+        height: 100%;
+    
+        display: flex;
+        flex-direction: column;
+        
+        margin:5%;
+        
+        text-align: center;
+        align-items: center;
+    }
+
+    #conteudo, #form{
+        width: 90%;
+        margin-bottom: 5%;
+    }
+
+    #form .area-formulario{
+        width: 80%;
+    }
+    #form .area-formulario form{
+        padding: 10px 0;
+    }
+
+    #form .area-formulario form input{
+        width: 90%;    
+        padding: 5%;    
+    }
+
+}
+@media(max-width: 500px){
+
+    #conteudo .titulo{
+        font-size: 3rem;
+    }
+
+    #conteudo .desc{
+        font-size: 1.3rem;
+    }
+
+    #form .button-try, #form .area-formulario .button-claim{
+        padding: 4%;
+
+        font-size: 1.5rem;
+    }
+}
